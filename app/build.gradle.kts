@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "co.edu.uan.android.uancasts"
+    namespace = "co.edu.uan.android.parkol"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "co.edu.uan.android.uancasts"
+        applicationId = "co.edu.uan.android.parkol"
         minSdk = 28
         targetSdk = 34
         versionCode = 1
@@ -33,10 +33,9 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlin {
-        compilerOptions {
-            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
-        }
+        jvmToolchain(25)
     }
+
     buildFeatures {
         viewBinding = true
         compose = true

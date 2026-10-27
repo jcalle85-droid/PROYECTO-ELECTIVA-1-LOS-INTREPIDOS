@@ -2,50 +2,103 @@
 
 Se proponen las siguientes ideas de aplicación para el proyecto:
 
-## Idea 1: UANCasts (seleccionada)
+## Idea 1: ParKol — Sistema de Gestión de Parqueadero (seleccionada)
 
-UANCasts es una aplicación que permite consultar y escuchar Podcasts de distintas fuentes a través
-de una interfaz de usuario amigable. La aplicación traerá la información de Listen Notes, que es una
-fuente pública de datos de Podcasts en Internet.
+ParKol es una aplicación móvil para Android desarrollada en Kotlin, orientada a la gestión y administración de un parqueadero público con capacidad para 50 vehículos. El sistema permitirá controlar las entradas y salidas de vehículos, consultar los cupos disponibles, realizar reservas, calcular automáticamente el valor a pagar según el tiempo de permanencia y registrar los pagos.
 
-### Aplicaciones similares
+La aplicación busca reducir el manejo manual de la información y facilitar la administración de los espacios disponibles mediante una interfaz sencilla y organizada.
 
-- [Apple Podcasts](https://apps.apple.com/es/app/apple-podcasts/id525463029)
-- [Pocket Casts](https://play.google.com/store/apps/details?id=au.com.shiftyjelly.pocketcasts&hl=es_CO&gl=US)
-- [Podcasts Addict](https://play.google.com/store/apps/details?id=com.bambuna.podcastaddict&hl=es_CO&gl=US)
-- [Stitcher](https://play.google.com/store/apps/details?id=com.stitcher.app&hl=es_CO&gl=US)
+### Funcionalidades principales
 
-## Idea 2: Lorem ipsum dolor sit amet
-
-Lorem ipsum dolor sit amet consectetur adipiscing elit laoreet platea integer, cras vestibulum
-sociis nunc nisl hac tempor sem porttitor magnis inceptos, nibh placerat varius blandit sed egestas
-montes fames diam. Dis non eu fames netus potenti sapien malesuada, eleifend himenaeos morbi ut
-mauris ad, senectus consequat tellus leo donec suspendisse. Ornare convallis facilisis nisi feugiat
-mus vel eros enim senectus, augue nibh nullam elementum conubia imperdiet magnis rutrum, eleifend
-cubilia torquent felis ultricies ut urna tortor. Convallis etiam taciti aenean fringilla orci
-eleifend ad donec, accumsan neque pharetra non venenatis platea risus, sociis ultricies nisi
-vulputate suspendisse a nec.
+* Registro de entrada de vehículos.
+* Registro de placa.
+* Selección del tipo de vehículo: carro o moto.
+* Visualización de cupos disponibles.
+* Reserva de cupos.
+* Registro de salida.
+* Cálculo automático del tiempo de permanencia.
+* Cálculo automático del valor a pagar.
+* Registro de pagos.
+* Historial de vehículos.
+* Panel de administración.
+* Configuración de tarifas.
+* Consulta de estadísticas del parqueadero.
 
 ### Aplicaciones similares
 
-- [App 1](#)
-- [App 2](#)
-- [App 3](#)
+* Parkopedia
+* Parclick
+* EasyPark
 
-## Idea 3: At vero eos et accusamus et iusto
+## Idea 2: ParKol Reservas
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
-commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+ParKol Reservas es una aplicación móvil enfocada en la gestión y reserva de espacios de parqueadero. Permitirá a los usuarios consultar los cupos disponibles antes de llegar al parqueadero y reservar un espacio según el tipo de vehículo.
+
+El sistema permitirá al administrador controlar las reservas, consultar los espacios ocupados y disponibles y gestionar la información de los usuarios y vehículos.
+
+### Funcionalidades principales
+
+* Consulta de cupos disponibles.
+* Selección del tipo de vehículo.
+* Reserva de espacios.
+* Cancelación de reservas.
+* Consulta del estado de las reservas.
+* Registro de vehículos.
+* Historial de reservas.
+* Panel de administración.
 
 ### Aplicaciones similares
 
-- [App 1](#)
-- [App 2](#)
-- [App 3](#)
+* Parclick
+* SpotHero
+* ParkWhiz
+
+## Idea 3: ParKol Control
+
+ParKol Control es una aplicación móvil orientada al control de las entradas, salidas y pagos de un parqueadero. El sistema permitirá registrar los datos de cada vehículo y calcular automáticamente el tiempo de permanencia y el valor correspondiente.
+
+La aplicación busca reemplazar los procesos manuales por un sistema digital que facilite el control de los vehículos y los pagos realizados.
+
+### Funcionalidades principales
+
+* Registro de entrada de vehículos.
+* Registro de salida.
+* Consulta mediante placa.
+* Registro del tipo de vehículo.
+* Cálculo automático del tiempo de permanencia.
+* Cálculo de tarifas.
+* Registro de pagos.
+* Liberación automática de cupos.
+* Historial de vehículos.
+* Consulta de ingresos.
+
+### Aplicaciones similares
+
+* Parkalot
+* Passport Parking
+* TIBA Parking
+
+## Idea 4: ParKol Admin
+
+ParKol Admin es una aplicación móvil orientada a la administración y control general de un parqueadero. Permitirá al administrador gestionar los vehículos, cupos, reservas, tarifas y pagos, además de consultar estadísticas sobre el funcionamiento del parqueadero.
+
+El sistema proporcionará información que facilite la toma de decisiones y permita conocer el nivel de ocupación e ingresos generados.
+
+### Funcionalidades principales
+
+* Administración de los 50 cupos.
+* Registro de vehículos.
+* Gestión de entradas y salidas.
+* Administración de reservas.
+* Configuración de tarifas.
+* Registro de pagos.
+* Consulta del historial.
+* Estadísticas de ocupación.
+* Estadísticas de ingresos.
+* Panel administrativo.
+
+### Aplicaciones similares
+
+* Parkable
+* Wayleadr
+* Smarking

@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "UANCasts"
+rootProject.name = "ParKol"
 include(":app")
