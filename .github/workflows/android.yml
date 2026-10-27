@@ -50,14 +50,17 @@ jobs:
         name: apk-debug.apk
     - name: Check for Firebase Credentials
       id: secret-check
+      env:
+        FIREBASE_CREDENTIALS: ${{ secrets.GCP_FIREBASE_CREDENTIALS }}
+      shell: bash
       run: |
-        if [ -z "\${{ secrets.GCP_FIREBASE_CREDENTIALS }}" ]; then
-          echo "⚠️ GCP_FIREBASE_CREDENTIALS secret is not available (likely a fork)."
-          echo "⏩ Breaking job early to avoid failures."
-          echo "should_skip=true" >> \$GITHUB_OUTPUT
+        if [ -z "$FIREBASE_CREDENTIALS" ]; then
+          echo "GCP_FIREBASE_CREDENTIALS secret is not available."
+          echo "Skipping Firebase Test Lab."
+          echo "should_skip=true" >> "$GITHUB_OUTPUT"
         else
-          echo "🚀 GCP_FIREBASE_CREDENTIALS secret found."
-          echo "should_skip=false" >> \$GITHUB_OUTPUT
+          echo "Firebase credentials found."
+          echo "should_skip=false" >> "$GITHUB_OUTPUT"
         fi
     - id: 'auth'
       if: steps.secret-check.outputs.should_skip != 'true'
