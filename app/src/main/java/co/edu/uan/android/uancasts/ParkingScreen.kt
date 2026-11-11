@@ -3,6 +3,7 @@ package co.edu.uan.android.uancasts
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -15,11 +16,18 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -29,9 +37,15 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun ParkingScreen(
-    parkingViewModel: ParkingViewModel = viewModel()
+    parkingViewModel: ParkingViewModel = viewModel(),
+    onAbrirHistorial: () -> Unit = {},
+    onCerrarSesion: () -> Unit = {}
 ) {
     val cupos = parkingViewModel.cupos
+
+    var menuExpandido by remember {
+        mutableStateOf(false)
+    }
 
     Column(
         modifier = Modifier
@@ -41,28 +55,79 @@ fun ParkingScreen(
             .padding(18.dp),
         verticalArrangement = Arrangement.spacedBy(18.dp)
     ) {
-        // Encabezado
-        Column(
-            verticalArrangement = Arrangement.spacedBy(5.dp)
+
+        // Encabezado con menú de opciones
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Text(
-                text = "PARKOL",
-                color = VerdeParKol,
-                fontSize = 29.sp,
-                fontWeight = FontWeight.ExtraBold
-            )
+            Column(
+                verticalArrangement = Arrangement.spacedBy(5.dp)
+            ) {
+                Text(
+                    text = "PARKOL",
+                    color = VerdeParKol,
+                    fontSize = 29.sp,
+                    fontWeight = FontWeight.ExtraBold
+                )
 
-            Text(
-                text = "Sistema de gestión de parqueadero",
-                color = TextoSecundarioParKol,
-                fontSize = 14.sp
-            )
+                Text(
+                    text = "Sistema de gestión de parqueadero",
+                    color = TextoSecundarioParKol,
+                    fontSize = 14.sp
+                )
 
-            Text(
-                text = "Control de espacios en tiempo real",
-                color = TextoParKol,
-                fontSize = 12.sp
-            )
+                Text(
+                    text = "Control de espacios en tiempo real",
+                    color = TextoParKol,
+                    fontSize = 12.sp
+                )
+            }
+
+            Box {
+                IconButton(
+                    onClick = {
+                        menuExpandido = true
+                    }
+                ) {
+                    Text(
+                        text = "⋮",
+                        color = TextoParKol,
+                        fontSize = 30.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+
+                DropdownMenu(
+                    expanded = menuExpandido,
+                    onDismissRequest = {
+                        menuExpandido = false
+                    }
+                ) {
+                    DropdownMenuItem(
+                        text = {
+                            Text("Historial de vehículos")
+                        },
+                        onClick = {
+                            menuExpandido = false
+                            onAbrirHistorial()
+                        }
+                    )
+
+                    DropdownMenuItem(
+                        text = {
+                            Text(
+                                text = "Salir",
+                                color = Color.Red
+                            )
+                        },
+                        onClick = {
+                            menuExpandido = false
+                            onCerrarSesion()
+                        }
+                    )
+                }
+            }
         }
 
         // Resumen de cupos
@@ -113,7 +178,9 @@ fun ParkingScreen(
                     value = parkingViewModel.placa,
                     onValueChange = parkingViewModel::cambiarPlaca,
                     modifier = Modifier.fillMaxWidth(),
-                    label = { Text("Placa del vehículo") },
+                    label = {
+                        Text("Placa del vehículo")
+                    },
                     placeholder = {
                         Text(
                             if (parkingViewModel.tipoVehiculo == "Moto") {
