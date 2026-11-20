@@ -21,8 +21,6 @@ La aplicación busca reducir el manejo manual de la información y facilitar la 
 * Registro de pagos.
 * Historial de vehículos.
 * Panel de administración.
-* Configuración de tarifas.
-* Consulta de estadísticas del parqueadero.
 
 ### Aplicaciones similares
 
@@ -32,7 +30,7 @@ La aplicación busca reducir el manejo manual de la información y facilitar la 
 
 ## Idea 2: ParKol Reservas
 
-ParKol Reservas es una aplicación móvil enfocada en la gestión y reserva de espacios de parqueadero. Permitirá a los usuarios consultar los cupos disponibles antes de llegar al parqueadero y reservar un espacio según el tipo de vehículo.
+ParKol Reservas es una aplicación móvil enfocada en la gestión y reserva de espacios de parqueadero. La aplicacion solo permite ser usada por el administrador y asi poder administrar los cupos disponibles antes de llegar al parqueadero y reservar un espacio según el tipo de vehículo.
 
 El sistema permitirá al administrador controlar las reservas, consultar los espacios ocupados y disponibles y gestionar la información de los usuarios y vehículos.
 
@@ -45,6 +43,8 @@ El sistema permitirá al administrador controlar las reservas, consultar los esp
 * Consulta del estado de las reservas.
 * Registro de vehículos.
 * Historial de reservas.
+* Historial de vehiculos
+* salida.
 * Panel de administración.
 
 ### Aplicaciones similares
