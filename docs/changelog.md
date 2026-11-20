@@ -22,7 +22,7 @@ uso de [versionamiento semántico](https://semver.org/spec/v2.0.0.html).
 
 - ... -->
 
-## [0.1.0](../tree/v0.1.0) - 2000-06-22
+## [0.1.0](../tree/v0.1.0) - 2026-08-22
 
 ### Agregado
 
@@ -32,7 +32,7 @@ uso de [versionamiento semántico](https://semver.org/spec/v2.0.0.html).
 
 - Formato en archivos de markup
 
-## [0.0.3](../tree/v0.0.3) - 2000-06-15
+## [0.0.3](../tree/v0.0.3) - 2026-09-19
 
 ### Agregado
 
@@ -40,22 +40,26 @@ uso de [versionamiento semántico](https://semver.org/spec/v2.0.0.html).
 
 ### Corregido
 
-- Errores de ortografía
+- Errores de funcionalidad.
 
-## [0.0.2](../tree/v0.0.2) - 2000-06-08
+## [0.0.2](../tree/v0.0.2) - 2026-10-20
 
 ### Agregado
 
-- Mockups de diseño de UI
+- Frontend
 
 ### Corregido
 
-- Errores de ortografía y algunos links
+- Errores con el backend y agregado operaciones de costos
 
-## [0.0.1](../tree/v0.0.1) - 2000-06-01
+## [0.0.1](../tree/v0.0.1) - 2026-11-12
 
 ### Agregado
 
 - Archivo readme  [README.md](../README.md)
 - Log de cambios [changelog.md](changelog.md)
 - Ideas de proyecto [ideas.md](ideas.md)
+
+### Corregido
+
+Hostorial de vehiculos y espacios de aparcado
